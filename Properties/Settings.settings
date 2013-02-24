@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Funktagebuch.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="OrgaKennung" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Adler</Value>
+    </Setting>
+    <Setting Name="Gliederung" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Langen</Value>
+    </Setting>
+    <Setting Name="BeendenAbfrage" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
