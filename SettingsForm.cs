@@ -11,10 +11,12 @@ namespace Funktagebuch
 {
     public partial class SettingsForm : Form
     {
-        public SettingsForm()
+        mainForm mainForm;
+        public SettingsForm(mainForm mainForm)
         {
             InitializeComponent();
             InitializeToolTips();
+            this.mainForm = mainForm;
         }
 
         private void InitializeToolTips()
@@ -31,6 +33,7 @@ namespace Funktagebuch
         {
             organisationBox.Text = Properties.Settings.Default.OrgaKennung;
             gliederungBox.Text = Properties.Settings.Default.Gliederung;
+            funkerBox.Text = mainForm.Funker;
         }
 
         private void cancelButton_Click(object sender, EventArgs e)
@@ -59,6 +62,10 @@ namespace Funktagebuch
         {
             Properties.Settings.Default.OrgaKennung = organisationBox.Text.Trim();
             Properties.Settings.Default.Gliederung = gliederungBox.Text.Trim();
+            if (funkerBox.Text.Trim() != "")
+            {
+                mainForm.Funker = funkerBox.Text.Trim();
+            }
             Close();
         }
     }

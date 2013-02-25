@@ -51,7 +51,7 @@
             this.contentLabel = new System.Windows.Forms.Label();
             this.contentBox = new System.Windows.Forms.TextBox();
             this.startButton = new System.Windows.Forms.Button();
-            this.changeFunkerButton = new System.Windows.Forms.Button();
+            this.createPdfButton = new System.Windows.Forms.Button();
             this.endButton = new System.Windows.Forms.Button();
             this.openButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
@@ -253,15 +253,15 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // changeFunkerButton
+            // createPdfButton
             // 
-            this.changeFunkerButton.Location = new System.Drawing.Point(284, 396);
-            this.changeFunkerButton.Name = "changeFunkerButton";
-            this.changeFunkerButton.Size = new System.Drawing.Size(130, 23);
-            this.changeFunkerButton.TabIndex = 18;
-            this.changeFunkerButton.Text = "Funker ändern";
-            this.changeFunkerButton.UseVisualStyleBackColor = true;
-            this.changeFunkerButton.Click += new System.EventHandler(this.changeFunkerButton_Click);
+            this.createPdfButton.Location = new System.Drawing.Point(284, 396);
+            this.createPdfButton.Name = "createPdfButton";
+            this.createPdfButton.Size = new System.Drawing.Size(130, 23);
+            this.createPdfButton.TabIndex = 18;
+            this.createPdfButton.Text = "PDF erstellen";
+            this.createPdfButton.UseVisualStyleBackColor = true;
+            this.createPdfButton.Click += new System.EventHandler(this.createPdfButton_Click);
             // 
             // endButton
             // 
@@ -324,7 +324,7 @@
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.openButton);
             this.Controls.Add(this.endButton);
-            this.Controls.Add(this.changeFunkerButton);
+            this.Controls.Add(this.createPdfButton);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.contentBox);
             this.Controls.Add(this.contentLabel);
@@ -379,7 +379,7 @@
         private System.Windows.Forms.Label contentLabel;
         private System.Windows.Forms.TextBox contentBox;
         private System.Windows.Forms.Button startButton;
-        private System.Windows.Forms.Button changeFunkerButton;
+        private System.Windows.Forms.Button createPdfButton;
         private System.Windows.Forms.Button endButton;
         private System.Windows.Forms.Button openButton;
         private System.Windows.Forms.Button saveButton;

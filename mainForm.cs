@@ -20,6 +20,15 @@ namespace Funktagebuch
             get { return funktagebuch.Funker; }
             set { funktagebuch.Funker = value; }
         }
+        public string Funker
+        {
+            get { return funker; }
+            set
+            {
+                funker = value;
+                UpdateViews();
+            }
+        }
         private string einsatzgebiet
         {
             get { return funktagebuch.Einsatzgebiet; }
@@ -73,7 +82,7 @@ namespace Funktagebuch
 
             openButton.Location = new Point(openButton.Location.X, this.Size.Height - 73);
             startButton.Location = new Point((this.Size.Width - 24) / 6 + 12, this.Size.Height - 73);
-            changeFunkerButton.Location = new Point(2 * ((this.Size.Width - 24) / 6) + 12, this.Size.Height - 73);
+            createPdfButton.Location = new Point(2 * ((this.Size.Width - 24) / 6) + 12, this.Size.Height - 73);
             endButton.Location = new Point(3 * ((this.Size.Width - 24) / 6) + 12, this.Size.Height - 73);
             saveButton.Location = new Point(4 * ((this.Size.Width - 24) / 6) + 12, this.Size.Height - 73);
             exitButton.Location = new Point(5 * ((this.Size.Width - 24) / 6) + 12, this.Size.Height - 73);
@@ -185,18 +194,6 @@ namespace Funktagebuch
             funktagebuch.Save();
         }
 
-        private void changeFunkerButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                funkerLabel.Text = ModalQuestion.Ask("Frage", "Neuer Funker:", true);
-            }
-            catch (NotAnsweredException)
-            {
-                
-            }
-        }
-
         private void exitButton_Click(object sender, EventArgs e)
         {
             Close();
@@ -230,7 +227,7 @@ namespace Funktagebuch
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
-            SettingsForm settingsForm = new SettingsForm();
+            SettingsForm settingsForm = new SettingsForm(this);
             settingsForm.ShowDialog();
         }
 
@@ -247,6 +244,18 @@ namespace Funktagebuch
                 }
             }
 #endif
+        }
+
+        private void createPdfButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                throw new NotImplementedException("Diese Funktion existiert noch nicht");
+            }
+            catch (NotImplementedException ex)
+            {
+                MessageBox.Show(ex.Message, "Fehler");
+            }
         }
     }
 }
